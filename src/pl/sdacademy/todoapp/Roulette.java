@@ -1,7 +1,6 @@
 package pl.sdacademy.todoapp;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Roulette {
 
