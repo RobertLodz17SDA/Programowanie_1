@@ -3,7 +3,7 @@ package pl.sdacademy.todoapp;
 import java.util.Scanner;
 
 public class HumanGambler extends Roulette {
-    int moneyAmount = 1000;
+    int moneyAmount;
     private int bet[] = new int[4];
 
     HumanGambler(int money) {
@@ -32,8 +32,8 @@ public class HumanGambler extends Roulette {
 
     private int betGamblerMoney() {
         int betAmount = 0;
-        for (int i = 0; i < this.bet.length; i++) {
-            betAmount += this.bet[i];
+        for (int e : this.bet) {
+            betAmount += e;
         }
         System.out.println("Obstawiana kwota : ");
         while (true) {
@@ -109,7 +109,7 @@ public class HumanGambler extends Roulette {
         }
     }
 
-    public void betHumanNumber() {
+    private void betHumanNumber() {
         int scannerIn;
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -127,23 +127,24 @@ public class HumanGambler extends Roulette {
 
     public void loseOrWin(Roulette casino) {
         int wonOrLostMoney = this.moneyAmount;
-        System.out.println(wonOrLostMoney);
+        System.out.println();
+        System.out.println("Rozpoczynając obstawianie miałeś " + wonOrLostMoney + " złotych gotówki");
+        System.out.print("W ruletkę ");
         if (this.rouletteNumber == casino.rouletteNumber) {
             wonOrLostMoney += 35 * this.bet[0];
         } else wonOrLostMoney -= this.bet[0];
-        System.out.println(wonOrLostMoney);
         if (this.numberColour == casino.numberColour) {
             wonOrLostMoney += this.bet[1];
         } else wonOrLostMoney -= this.bet[1];
-        System.out.println(wonOrLostMoney);
         if (this.numberParity == casino.numberParity) {
             wonOrLostMoney += this.bet[2];
         } else wonOrLostMoney -= this.bet[2];
-        System.out.println(wonOrLostMoney);
         if (this.numberThird == casino.numberThird) {
-            wonOrLostMoney = 2 * this.bet[3];
+            wonOrLostMoney += 2 * this.bet[3];
         } else wonOrLostMoney -= this.bet[3];
-        System.out.println(wonOrLostMoney);
+        if (wonOrLostMoney > this.moneyAmount) {
+            System.out.println("wygrałeś" + (wonOrLostMoney - this.moneyAmount) + " złotych");
+        } else System.out.println("przegrałeś " + (this.moneyAmount - wonOrLostMoney) + " złotych");
         this.moneyAmount = wonOrLostMoney;
         System.out.println("Pozostało ci " + this.moneyAmount + " złotych gotówki");
     }

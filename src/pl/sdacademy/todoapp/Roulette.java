@@ -107,7 +107,7 @@ public class Roulette {
         }
     }
 
-    public void ruletteNumber() {
+    private void ruletteNumber() {
         Random number = new Random();
         this.rouletteNumber = number.nextInt(36);
     }
@@ -117,7 +117,7 @@ public class Roulette {
     }
 
 
-    public static boolean gameOver(int capital) {
+    private static boolean gameOver(int capital) {
         if (capital <= 100) {
             return true;
         } else return false;
