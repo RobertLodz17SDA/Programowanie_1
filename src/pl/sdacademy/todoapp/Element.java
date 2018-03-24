@@ -3,7 +3,7 @@ package pl.sdacademy.todoapp;
 public class Element {
 
     private Element next;
-    private String text;
+    String text;
 
     public Element(String text) {
         this.text = text;
@@ -35,6 +35,10 @@ public class Element {
 
     public Element getNext() {
         return next;
+    }
+
+    public String getText(){
+        return this.text;
     }
 }
 

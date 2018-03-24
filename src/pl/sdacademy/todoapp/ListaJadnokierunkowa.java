@@ -36,4 +36,14 @@ public class ListaJadnokierunkowa {
             prev.setNext(next);
         }
     }
+
+    public String getElement(int index){
+        Element currentElement = first;
+        int iterationIndex = 0;
+        while (iterationIndex < index){
+            currentElement = currentElement.getNext();
+            iterationIndex ++;
+        }
+        return currentElement.getText();
+    }
 }
