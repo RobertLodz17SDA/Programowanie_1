@@ -28,7 +28,7 @@ public class Car {
     }
 
     public String toString(){
-        String string = "|| "+ markaIModel+ "  "+ kolor+" ||";
+        String string = "|"+ kolor+ " "+markaIModel+"|";
         return string;
     }
 

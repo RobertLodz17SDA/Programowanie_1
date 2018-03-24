@@ -29,7 +29,6 @@ public class ListTest {
 
         System.out.println(lista);
         System.out.println("--------------");
-        System.out.println(lista);
         index = 2;
         lista.remove(index);
         System.out.println("Usunięty element Nr "+ index);
