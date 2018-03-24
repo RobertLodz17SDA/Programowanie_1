@@ -5,9 +5,9 @@ import java.util.stream.Collectors;
 
 public class Car {
 
-    String markaIModel;
-    String kolor;
-    int predkosc;
+    private String markaIModel;
+    private String kolor;
+    private int predkosc;
 
     Car(String markaIModel, String kolor, int predkosc){
         this.markaIModel = markaIModel;
@@ -15,7 +15,7 @@ public class Car {
         this.predkosc = predkosc;
     }
 
-    public String getMarkaIModel() {
+    private String getMarkaIModel() {
         return markaIModel;
     }
 
@@ -25,6 +25,11 @@ public class Car {
 
     public int getPredkosc() {
         return predkosc;
+    }
+
+    public String toString(){
+        String string = "|| "+ markaIModel+ "  "+ kolor+" ||";
+        return string;
     }
 
     public static void main(String[] args) {

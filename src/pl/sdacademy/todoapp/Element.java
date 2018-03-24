@@ -1,8 +1,8 @@
 package pl.sdacademy.todoapp;
 
-public class Element<T> {
+public class Element {
 
-    private Element<T> next;
+    private Element next;
     private Object text;
 
     Element(Object text) {

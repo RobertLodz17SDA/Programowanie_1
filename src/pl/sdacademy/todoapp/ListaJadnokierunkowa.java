@@ -2,7 +2,7 @@ package pl.sdacademy.todoapp;
 
 public class ListaJadnokierunkowa<T> {
 
-    private Element<T> first;
+    private Element first;
 
     public void add(Object e) {
         if (first == null) {
