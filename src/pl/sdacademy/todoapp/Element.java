@@ -1,11 +1,11 @@
 package pl.sdacademy.todoapp;
 
-public class Element <T> {
+public class Element<T> {
 
-    private Element <T> next;
-    private String text;
+    private Element<T> next;
+    private Object text;
 
-    Element(String text) {
+    Element(Object text) {
         this.text = text;
     }
 
@@ -29,7 +29,7 @@ public class Element <T> {
         if (next != null) {
             return text + " " + String.valueOf(next);
         } else {
-            return text;
+            return String.valueOf(text);
         }
     }
 
@@ -37,7 +37,7 @@ public class Element <T> {
         return next;
     }
 
-    public String getText(){
+    public Object getText() {
         return this.text;
     }
 }

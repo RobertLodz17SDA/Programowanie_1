@@ -1,10 +1,10 @@
 package pl.sdacademy.todoapp;
 
-public class ListaJadnokierunkowa <T>{
+public class ListaJadnokierunkowa<T> {
 
-    private Element <T> first;
+    private Element<T> first;
 
-    public void add(String e) {
+    public void add(Object e) {
         if (first == null) {
             first = new Element(e);
         } else {
@@ -28,8 +28,8 @@ public class ListaJadnokierunkowa <T>{
             Element current = first;
             Element prev = null;
             for (int i = 0; i < index; i++) {
-             prev = current;
-             current = current.getNext();
+                prev = current;
+                current = current.getNext();
             }
             Element next = current.getNext();
             current.removeRef();
@@ -37,13 +37,15 @@ public class ListaJadnokierunkowa <T>{
         }
     }
 
-    public String getElement(int index){
+    public Object getElement(int index) {
         Element currentElement = first;
         int iterationIndex = 0;
-        while (iterationIndex < index){
+        while (iterationIndex < index) {
             currentElement = currentElement.getNext();
-            iterationIndex ++;
+            iterationIndex++;
         }
-        return currentElement.getText();
+        if (currentElement == null){
+            return null;
+        }else return currentElement.getText();
     }
 }
