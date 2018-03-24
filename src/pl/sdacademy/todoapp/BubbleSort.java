@@ -5,8 +5,8 @@ import java.util.Random;
 public class BubbleSort {
 
     public static void main(String[] args) {
-//        int[] tablica = randomGenerated(30, 1000);
-        int[] tablica = {1,3,2,6,5,20,4,7,9,8,10,2};
+        int[] tablica = randomGenerated(30, 1000);
+//        int[] tablica = {1,3,2,6,5,20,4,7,9,8,10,2};
         System.out.print("Wejściowy ciąg liczb : ");
         printTable(tablica);
         tablica = bubbleSortUpTable(tablica);
