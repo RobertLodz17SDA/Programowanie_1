@@ -27,7 +27,7 @@ public class ListaJadnokierunkowa <T>{
         } else {
             Element current = first;
             Element prev = null;
-            for (int i = 0; i <= index; i++) {
+            for (int i = 0; i < index; i++) {
              prev = current;
              current = current.getNext();
             }
