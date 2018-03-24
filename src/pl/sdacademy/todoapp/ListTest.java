@@ -10,24 +10,25 @@ public class ListTest {
         ListaJadnokierunkowa lista = new ListaJadnokierunkowa();
         int index = 2;
 
-        lista.add(new Element("Jan"));
-        lista.add(new Element("Adam"));
-        lista.add(new Element("Aleksander"));
-        lista.add(new Element("Jakub"));
-        lista.add(new Element("Zenon"));
-        lista.add(new Element("Ewa"));
-        lista.add(new Element("Małgosia"));
-        lista.add(new Element("Agnieszka"));
+        lista.add("Jan");
+        lista.add("Adam");
+        lista.add("Aleksander");
+        lista.add("Jakub");
+        lista.add("Zenon");
+        lista.add("Ewa");
+        lista.add("Małgosia");
+        lista.add("Agnieszka");
 
         System.out.println(lista);
         System.out.println("--------------");
         System.out.println(lista);
+        index = 5;
         lista.remove(index);
-        System.out.println("Removed "+ index + " element.");
+        System.out.println("Removed element Nr "+ index);
         System.out.println(lista);
         System.out.println("--------------");
         System.out.println("Element nr " + index + " jest równy " + lista.getElement(index));
-        index = 0;
+        index = 2;
         System.out.println("Element nr " + index + " jest równy " + lista.getElement(index));
     }
 }

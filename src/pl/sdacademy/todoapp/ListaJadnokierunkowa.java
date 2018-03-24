@@ -1,14 +1,14 @@
 package pl.sdacademy.todoapp;
 
-public class ListaJadnokierunkowa {
+public class ListaJadnokierunkowa <T>{
 
-    private Element first;
+    private Element <T> first;
 
-    public void add(Element e) {
+    public void add(String e) {
         if (first == null) {
-            first = e;
+            first = new Element(e);
         } else {
-            first.addNext(e);
+            first.addNext(new Element(e));
         }
     }
 

@@ -1,11 +1,11 @@
 package pl.sdacademy.todoapp;
 
-public class Element {
+public class Element <T> {
 
-    private Element next;
-    String text;
+    private Element <T> next;
+    private String text;
 
-    public Element(String text) {
+    Element(String text) {
         this.text = text;
     }
 
